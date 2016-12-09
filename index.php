@@ -1,9 +1,9 @@
 <?php
 	require("menu.php");
 
-	require("tools/articleObj.php");
+	require("../readjson.php");
 
-	$article = new articleObj();
+	$article = new readJson();
 ?>
 
 

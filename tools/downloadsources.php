@@ -1,0 +1,84 @@
+<?php 
+	
+	/**
+	* download all sources and save in json file; filename = sources.json
+	*/
+	class downloadsources {
+		
+
+		protected $sources;
+		protected $location;
+
+
+
+
+		function __construct() {
+
+			$this->sources = array();
+
+
+			$this->location = "https://newsapi.org/v1/sources";
+
+			$this->getSources();
+		}
+
+
+		protected function getSources(){
+
+
+			$content = file_get_contents($this->location);
+
+			$json = json_decode($content, TRUE);
+
+			if($json['status'] == "ok"){
+				foreach($json['sources'] as $src){
+					$this->sources = $src;
+
+					$this->writeJson();
+				}
+
+
+			}
+		}
+
+
+
+
+
+		private function writeJson() {
+
+			$filename = "articles/sources.json";
+
+			$data = $this->sources;
+
+		    if (!file_exists($this->getJsonDirectory())) {
+		      if (!drush_mkdir($this->getJsonDirectory())) {
+		        return drush_set_error('NO_JSON_DIR', dt('Unable to create JSON directory at !file', array('!file' => $this->getJsonDirectory())));
+		      }
+		    }
+		    // Remove headers.
+		    array_shift($data);
+		    $json_filename = str_replace('xml', 'json', $filename);
+		    $file = $this->getJsonDirectory() . '/' . $json_filename;
+		    if (file_exists($file)) {
+		      unlink($file);
+		    }
+		    $json_data = json_encode($data);
+		    if (!file_put_contents($file, $json_data)) {
+		      return drush_set_error(dt('Failed to write JSON for file !file', array('!file' => $json_filename)));
+		    }
+		    var_dump('Wrote JSON to file !file', array('!file' => $file), 'ok');
+		    return TRUE;
+		}
+
+
+		private function getJsonDirectory(){
+			return basename(__DIR__);
+		}
+	}
+
+
+	new downloadsources();
+
+
+?>

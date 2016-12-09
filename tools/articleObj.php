@@ -58,7 +58,7 @@
 
 			foreach($this->_src as $src){
 				$this->articles = $this->_articles->getArticles($src);
-				$this->writeJson();
+				//$this->writeJson();
 
 
 			}
