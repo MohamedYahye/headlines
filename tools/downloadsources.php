@@ -31,10 +31,10 @@
 			$json = json_decode($content, TRUE);
 
 			if($json['status'] == "ok"){
-				foreach($json['sources'] as $src){
+				foreach($json as $src){
 					$this->sources = $src;
 
-					$this->writeJson();
+					$this->writeBadJson();
 				}
 
 
@@ -44,8 +44,15 @@
 
 
 
+		protected function writeBadJson(){
+			$fh = fopen("articles/sources.json", 'w')
+			      or die("Error opening output file");
+			fwrite($fh, json_encode($this->sources,JSON_UNESCAPED_UNICODE));
+			fclose($fh);
+		}
 
-		private function writeJson() {
+
+		protected function writeJson() {
 
 			$filename = "articles/sources.json";
 

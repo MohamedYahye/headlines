@@ -48,3 +48,29 @@ table {
 	margin-left: 50px;
 	width: 95%;
 }
+
+
+
+.highlight-area > div:first-child{
+}
+
+.highlight-area > div{
+	float: left;
+	display: block;
+}
+
+
+.image{
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	width: 33%;
+	height: 120px;
+	text-align: center;
+}
+
+.image > a > h1{
+	line-height: 1;
+	position: absolute;
+	margin-top: 150px;
+}
