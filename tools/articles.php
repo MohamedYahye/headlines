@@ -25,7 +25,6 @@
 
 			$this->API_KEY = "f15a57355e374710923d902efe952db5";
 			//$this->getArticles("the-next-web");
-
 			$this->articlesArray = array();
 		}
 

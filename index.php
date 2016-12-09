@@ -23,11 +23,11 @@
 		<div class="highlight-area">
 			<?php
 
+
+
 				$articles = $article->returnArticles();
 
-				
-				var_dump(array_slice($articles, 50));
-
+				var_dump($articles);
 
 			?>
 
