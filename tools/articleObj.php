@@ -58,7 +58,9 @@
 
 			foreach($this->_src as $src){
 				$this->articles = $this->_articles->getArticles($src);
-				//$this->writeJson();
+
+
+				$this->writeBadJson();
 
 
 			}
@@ -82,6 +84,15 @@
 		}
 
 
+
+
+
+		protected function writeBadJson(){
+			$fh = fopen("articles/data.json", 'w')
+			      or die("Error opening output file");
+			fwrite($fh, json_encode($this->articles,JSON_UNESCAPED_UNICODE));
+			fclose($fh);
+		}
 
 
 		protected function writeJson() {
@@ -117,7 +128,7 @@
 	}
 
 
-	//new articleObj();
+	new articleObj();
 
 
 ?>

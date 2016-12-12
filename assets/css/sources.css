@@ -1,0 +1,46 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+
+.source-containter {
+	margin-top: 20px;
+	width: 66%;
+	margin-left: 50px;
+}
+
+.sources{
+	margin-left: 70px;
+	width: 80%;
+}
+
+.allsources {
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 120px;
+	width: 25%;
+	display: block;
+	float: left;
+	margin-bottom: 80px;
+	margin-left: 5%;
+	padding-left: 2%;
+}
+
+.sourcenames{
+	position: absolute;
+    margin-top: 130px;
+    background-color: antiquewhite;
+    padding: 5px;
+    text-align: center;
+    width: 200px;
+    border: 1px solid #e4e4e4;
+    text-decoration: none;
+}
+
+
+.sourcenames:hover{
+	text-decoration: underline;
+}

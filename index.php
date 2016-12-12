@@ -33,13 +33,10 @@
 
 					foreach($sliced as $allArticles){
 
-
-
 						echo "<div class='image'style='background-image: url(".$allArticles['urlToImage'].");'>
 
 						<a href=".$allArticles['url']." target='_blank'><h1>".$allArticles['title']."</h1></a>
 						</div>";
-
 
 					}
 				?>

@@ -13,7 +13,7 @@
 			
 			<ul>
 				<li><a href="index.php">Home</a></li>
-				<li><a href="uitgever.php">Uitgevers</a></li>
+				<li><a href="uitgevers.php">Uitgevers</a></li>
 				<li><a href="categorie.php">Categorieën</a></li>
 				<li><a href="talen.php">Talen</a></li>
 				<li><a href="register.php">Registreren</a></li>
