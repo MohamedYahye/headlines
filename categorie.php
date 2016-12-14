@@ -57,7 +57,7 @@
 				
 			}else{
 
-				$dirname = "images/";
+				$dirname = "images/category/";
 				$images = glob($dirname."*.png");
 				$categoryArray = array("business", "entertainment", "gaming", "general", "music", "science-and-nature", "sport", "technology");
 				foreach(array_combine($images, $categoryArray) as $image => $cat) {

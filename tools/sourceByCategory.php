@@ -32,13 +32,9 @@
 
 			if($json['status'] == "ok"){
 				foreach($json as $data){
-				$this->sourceArray = $data;
+					$this->sourceArray = $data;
+				}
 			}
-			}
-			
-
-
-
 		}
 
 

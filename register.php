@@ -13,16 +13,7 @@
 <body>
 
 
-	<div class="wrap">
-		<form name="register" method="post">
-			
-
-			<input type='text' name="username" placeholder="John" /><br/>
-			<input type="email" name="email" placeholder="jonh@live.nl" /><br/>
-			<input type="password" name="password" placeholder="******"><br />
-			<input type="password" name="repeatpassword" placeholder="******"><br/>
-			<input type="submit" name="submit" value="submit">
-		</form>
+	<div class="container">
 	</div>
 
 </body>

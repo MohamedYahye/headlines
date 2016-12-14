@@ -3,13 +3,11 @@
 	padding: 0;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 .container{
 	margin-top: 50px;
 	margin-left: 50px;
 }
-
 
 
 .category-images{
@@ -36,6 +34,7 @@
 #category:hover{
 	color: #6b6868;
 }
+
 
 
 .article-image {
