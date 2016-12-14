@@ -1,6 +1,10 @@
 <?php 
 	
-	require("index.php");
+	require("menu.php");
 
 
 ?>
+
+
+
+

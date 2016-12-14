@@ -2,18 +2,15 @@
 	require("menu.php");
 
 	require('tools/readsources.php');
-
+	require("tools/articleBySource.php");
+	
 	ini_set('display_startup_errors', 1);
 	ini_set('display_errors', 1);
 	error_reporting(-1);
 
+	
 
-
-	if(!empty(isset($_GET['source']))){
-		echo $_GET['source'];
-	}
-
-	$source = new readsources();
+	
 	
 	
 	
@@ -32,18 +29,37 @@
 	<div class="source-containter">
 		<div class="sources">
 			<?php
-
-				ini_set('display_startup_errors', 1);
-				ini_set('display_errors', 1);
-				error_reporting(-1);
 				
 
-				$sources = $source->returnSources();
+				if(!empty(isset($_GET['source']))){
 
-				foreach($sources as $_source){
-					echo "<div class='allsources' style='background-image: url(".$_source['urlsToLogos']['medium'].");'>";
-					echo "<a class='sourcenames' href='http://mo-portfolio.nl/headlines/uitgevers.php?source=".$_source['id']."'>".$_source['name']."</a></div>";
+					$article = new articleBySource($_GET['source']);
+
+
+					$articelArray = $article->returnArticle();
+
+
+					foreach($articelArray as $article){
+						echo "<a href=".$article['url']." target='_blank'> 
+							<div class='article-image' style='background-image: url(".$article['urlToImage'].");'>
+							<h4 id='title'>".$article['title']."</h4>
+							</div></a>";
+					}
+
+				}else{
+					$source = new readsources();
+
+
+
+					$sources = $source->returnSources();
+
+					foreach($sources as $_source){
+						echo "<div class='allsources' style='background-image: url(".$_source['urlsToLogos']['medium'].");'>";
+						echo "<a class='sourcenames' href='http://mo-portfolio.nl/headlines/uitgevers.php?source=".$_source['id']."'>".$_source['name']."</a></div>";
+					}
 				}
+
+				
 			?>
 		</div>
 	</div>

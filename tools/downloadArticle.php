@@ -54,7 +54,7 @@
 
 
 		private function downloadArticle($src){
-			$this->location = $this->location = "https://newsapi.org/v1/articles?source=".$src."&apiKey=".$this->API_KEY."";
+			$this->location = "https://newsapi.org/v1/articles?source=".$src."&apiKey=".$this->API_KEY."";
 
 			$content = file_get_contents($this->location);
 
@@ -64,8 +64,7 @@
 
 			if($json['status'] == "ok"){
 				foreach($json as $article){
-					$this->articleArray = $article;
-
+					$this->articleArray[] = $article;
 
 					$this->writeBadJsonArticle($article);
 				}
