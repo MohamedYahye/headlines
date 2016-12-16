@@ -1,4 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
 *{
   margin:0;
   padding: 0;
+}
+
+
+.container{
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+
+.form-container{
+  padding: 5px;
+}
+
+
+.form{
+
+  font-family: "Raleway", bold;
+
+}
+
+.form > input{
+  width: 300px;
+  height: 35px;
+  padding-left: 5px;
+}
+
+.form >input:focus {
+  outline: none;
+}
+
+.form > input[type='submit']{
+  width: 305px;
+  background-color: #999999;
+  border: 1px solid #fff;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+
+.form > input[type='submit']:hover{
+  background-color: #b9b9b9;
 }
