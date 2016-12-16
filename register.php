@@ -2,6 +2,8 @@
 
 	require_once("menu.php");
 
+
+
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +20,17 @@
 
 		<div class="form-container">
 			
-			<form class="form" method="POST" action="register.php" name="registerForm">
+
+			<?php 
+
+				if(!empty(isset($_GET['message']))){
+					echo "<p class='error-message'>" . $_GET['message']. "</p>";
+				}
+
+
+			?>
+
+			<form class="form" method="POST" action="tools/registeruser.php" name="registerForm" >
 				<label class="label" for="name">Name:</label><br /><br />
 				<input type="text" name="name" id="name"><br /><br />
 				<label class="label" for="username">Username:</label><br /> <br />
@@ -39,43 +51,6 @@
 		</div>
 
 	</div>
-
-
-	<script type="text/javascript">
-		
-		$(function() {
-
-			var proceed = false;
-
-			var name = returnElement("name");
-			var username = returnElement("username");
-			var email = returnElement("email");
-			var password = returnElement("password");
-			var repeat = returnElement("repeat");
-			var submit = returnElement("submit");
-
-
-			
-
-
-			submit.on("click", function(){
-				
-			})
-
-
-			function returnElement($id){
-
-				return $("#" + $id);
-			}
-
-
-
-		});
-		
-
-
-		
-	</script>
 
 </body>
 </html>

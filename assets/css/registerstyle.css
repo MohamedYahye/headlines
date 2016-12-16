@@ -45,3 +45,16 @@
 .form > input[type='submit']:hover{
   background-color: #b9b9b9;
 }
+
+
+.error-message {
+    background-color: #b1c2da;
+    height: 40px;
+    text-align: center;
+    line-height: 1.5;
+    color: #fff;
+    border: 1px solid #a5a5a5;
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-family: "Raleway", bold;
+}
