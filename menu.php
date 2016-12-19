@@ -17,7 +17,7 @@
 				<li><a href="categorie.php">Categorieën</a></li>
 				<li><a href="talen.php">Talen</a></li>
 				<li><a href="register.php">Registreren</a></li>
-				<li><a href="login.php.php">Inloggen</a></li>
+				<li><a href="login.php">Inloggen</a></li>
 				<li><a href="index.php">Lees later</a></li>
 			</ul>
 

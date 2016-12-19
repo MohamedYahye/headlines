@@ -25,6 +25,11 @@
 
 				if(!empty(isset($_GET['message']))){
 					echo "<p class='error-message'>" . $_GET['message']. "</p>";
+
+
+					if($_GET['message'] == "success"){
+						header("Location:http://mo-portfolio.nl/headlines/login.php");
+					}
 				}
 
 
