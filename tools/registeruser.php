@@ -124,11 +124,11 @@
 			if($proceed){
 				
 
-				$stmt = $dbh->prepare("SELECT * from register where username =:username AND email=:email");
+				$stmt = $dbh->prepare("SELECT * from register where username =:username AND email=:email and name=:name");
 
 				$stmt->bindParam(":username", $this->username);
 				$stmt->bindParam(":email", $this->email);
-
+				$stmt->bindParam(":name", $this->name);
 				$stmt->execute();
 
 				if($stmt->rowCount() > 0){

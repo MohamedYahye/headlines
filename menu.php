@@ -18,7 +18,7 @@
 				<li><a href="talen.php">Talen</a></li>
 				<li><a href="register.php">Registreren</a></li>
 				<li><a href="login.php">Inloggen</a></li>
-				<li><a href="index.php">Lees later</a></li>
+				<li><a href="leeslater.php">Lees later</a></li>
 			</ul>
 
 			<div class="info">

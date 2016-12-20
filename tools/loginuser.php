@@ -57,9 +57,11 @@
 		private function checkUserinDb(){
 			require("connect.php");
 			require("passHash.php");
+			require("session.php");
 
 			$conn = new connect();
 
+			$session = new session();
 
 			$proceed = $this->continue;
 
@@ -77,17 +79,26 @@
 					$stmt->bindParam(":username", $this->username);
 
 					$stmt->execute();
-					while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+					if($stmt->rowCount() > 0){
+						while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 
-						$check = $hash->check_password($row['password'], $this->password);
+							$check = $hash->check_password($row['password'], $this->password);
 
-						if($check){
-							echo "true";
-						}else{
-							echo "false";
+							if($check){
+								$session->setUser($row['username']);
+
+								Header("Location:http://mo-portfolio.nl/headlines/leeslater.php");
+							}else{
+								$message = "username or password incorrect";
+								$this->redirectWithErrorMessage($message);
 						}
 
+						}
+					}else{
+						$message = "username or password is incorrect";
+						$this->redirectWithErrorMessage($message);
 					}
+					
 
 					
 

@@ -30,7 +30,7 @@
 #title{
 	position: absolute;
 	margin-top: 200px;
-	margin-left: 50px;
+	margin-left: 145px;
 	width: 200px;
 	font-family: "Raleway", bold;
 	color: #756767;
@@ -39,4 +39,24 @@
 
 #title:hover{
 	color: black;
+}
+
+#mark {
+    float: left;
+    margin-top: 242px;
+    margin-left: -275px;
+    cursor: pointer;
+}
+
+
+.error-message {
+    background-color: #b1c2da;
+    height: 40px;
+    text-align: center;
+    line-height: 1.5;
+    color: #fff;
+    border: 1px solid #a5a5a5;
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-family: "Raleway", bold;
 }
