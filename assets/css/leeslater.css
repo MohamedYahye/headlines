@@ -1,0 +1,33 @@
+*{
+	margin:0;
+	padding: 0;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+
+
+.saved-articles{
+	margin-top: 50px;
+	margin-left: 120px;
+}
+
+.saved-articles > a{
+
+	background-color: #ffebcd;
+	text-align: center;
+	padding: 8px;
+	font-family: "Raleway", bold;
+	text-decoration: none;
+	border: 1px solid #dac8ae;
+
+	color: #332f28;
+
+}
+
+
+.saved-articles > a:hover{
+	background-color: #f0f0f0;
+	border: 1px solid #d2d2d2;
+}

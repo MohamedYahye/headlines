@@ -26,11 +26,20 @@
 
 
 		private function getArticleBySource($src){
+
+
+			$arrContextOptions=array(
+			    "ssl"=>array(
+			        "verify_peer"=>false,
+			        "verify_peer_name"=>false,
+			    ),
+			); 
+
 			$this->location = "https://newsapi.org/v1/articles?source=".$src."&apiKey=".$this->API_KEY."";
 
 
 
-			$content = file_get_contents($this->location);
+			$content = file_get_contents($this->location, false, stream_context_create($arrContextOptions));
 
 			$json = json_decode($content, TRUE);
 
