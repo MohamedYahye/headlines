@@ -71,3 +71,12 @@
     margin-top: 130px;
     font-family: "Raleway", bold;
 }
+
+
+#mark {
+    float: left;
+    margin-top: 241px;
+    margin-left: -240px;
+    cursor: pointer;
+    margin-bottom: 60px;
+}

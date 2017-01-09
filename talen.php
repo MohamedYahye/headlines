@@ -61,9 +61,9 @@
 						foreach($articles as $art){
 							$articleArray = $art;
 
-							echo "<a class='class-articles' href=".$articleArray['url']." target='_blank' title=".$articleArray['title'].">
+							echo "<div class='location'><a class='class-articles' href=".$articleArray['url']." target='_blank' title=".$articleArray['title'].">
 									<div class='article-image' style='background-image: url(".$articleArray['urlToImage'].");'>
-									<h5 id='title'>".$articleArray['title']."</h5></div></a>";
+									<h5 id='title'>".$articleArray['title']."</h5></div></a><form method='post' action='tools/saveArticle.php'><input name='article-to-save'type='hidden' value=".$art['url']."><input type='submit'id='mark' value='favorite'></form><div>";
 
 
 						}

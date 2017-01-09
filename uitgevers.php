@@ -40,10 +40,11 @@
 
 
 					foreach($articelArray as $article){
-						echo "<a href=".$article['url']." target='_blank'> 
+						echo "<div class='location'><a href=".$article['url']." target='_blank'> 
 							<div class='article-image' style='background-image: url(".$article['urlToImage'].");'>
 							<h4 id='title'>".$article['title']."</h4>
-							</div></a>";
+							</div></a> <form method='post' action='tools/saveArticle.php'><input name='article-to-save'type='hidden' value=".$article['url'].">
+							<input type='submit'id='mark' value='favorite'></form><div>";
 					}
 
 				}else{

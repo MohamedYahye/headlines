@@ -47,9 +47,9 @@
 
 					foreach($articleArray as $articles){
 
-						echo "<a class='class-articles' href=".$articles['url']." target='_blank' title=".$articles['title'].">
+						echo "<div class='location'><a class='class-articles' href=".$articles['url']." target='_blank' title=".$articles['title'].">
 						<div class='article-image' style='background-image: url(".$articles['urlToImage'].");'>
-						<h5 id='title'>".$articles['title']."</h5></div></a>";
+						<h5 id='title'>".$articles['title']."</h5></div></a><form method='post' action='tools/saveArticle.php'><input name='article-to-save'type='hidden' value=".$articles['url']."><input type='submit'id='mark' value='favorite'></form><div>";
 					}
 					
 				}
