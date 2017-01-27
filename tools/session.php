@@ -13,17 +13,27 @@
 
 
 		public function setUser($username){
+
+
+
 			$_SESSION['username'] = $username;
 		}
 
 
 		public function returnUsername(){
-			return $_SESSION['username'];
+
+			if(!empty($_SESSION['username'])){
+				return $_SESSION['username'];
+			}else{
+				return false;
+			}
+
+			
 		}
 
 
 		public function destroySession(){
-			unset($_SESSION['username']);
+			session_destroy();
 		}
 	}
 

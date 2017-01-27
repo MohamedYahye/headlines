@@ -24,9 +24,28 @@
 			<div class="info">
 				
 				<ul>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Disclaimer</a></li>
-					<li><a href="#">News Api</a></li>
+					<?php 
+
+
+						if (session_status() == PHP_SESSION_ACTIVE) {
+						  echo 'Session is active';
+						}else{
+
+							if(!class_exists("session")){
+
+								echo "<li> <a href='account.php'>Account Bekijken</a></li>";
+
+
+							}
+
+
+
+						}
+
+					?>
+
+
+					<li><a href="logout.php">Logout</a></li>
 				</ul>
 
 			</div>

@@ -1,0 +1,31 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+._wrap{
+	margin-left: 124px;
+	margin-top: 50px;
+}
+
+h4{
+	font-family: "Raleway", bold;
+}
+
+
+.user_info {
+	margin-top: 50px;
+
+}
+
+#message{
+	background-color: beige;
+    line-height: 1.5;
+    text-align: center;
+    padding: 5px;
+    color: brown;
+    margin-bottom: 50px;
+    border: 1px solid #e0e0e0;
+}

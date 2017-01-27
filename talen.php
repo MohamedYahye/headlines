@@ -32,6 +32,12 @@
 			
 			<?php
 
+
+				if(!empty(isset($_GET['message']))){
+					echo "<p id='message'>".$_GET['message']."</p>";
+				}
+			
+
 				$sourceArray;
 				$articleArray;
 

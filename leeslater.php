@@ -66,7 +66,7 @@
 
 
 		}else{
-			echo "not logged in";
+			echo "<a href='login.php'>Login to save articles </a> ";
 		}
 	}
 

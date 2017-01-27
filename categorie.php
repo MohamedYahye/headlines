@@ -28,6 +28,11 @@
 		<?php 
 
 
+
+			if(!empty(isset($_GET['message']))){
+				echo "<p id='message'>".$_GET['message']."</p>";
+			}
+
 			if(!empty($_GET['category'])){
 
 				$sourceBy = new sourceByCategory($_GET['category']);

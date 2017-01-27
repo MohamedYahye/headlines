@@ -72,3 +72,14 @@
     margin-left: -240px;
     cursor: pointer;
 }
+
+
+#message{
+	background-color: beige;
+    line-height: 1.5;
+    text-align: center;
+    padding: 5px;
+    color: brown;
+    margin-bottom: 50px;
+    border: 1px solid #e0e0e0;
+}

@@ -113,6 +113,9 @@
 							$message = "Article saved successfully";
 
 							$this->redirectWithErrorMessage($message);
+
+							
+
 						}else{
 							echo "no success";
 						}
@@ -140,7 +143,29 @@
 		private function redirectWithErrorMessage($message){
 
 			try{
-				header("Location:http://mo-portfolio.nl/headlines/index.php?message=".$message." ");
+				if (isset($_SERVER["HTTP_REFERER"])) {
+
+
+					$url = $_SERVER["HTTP_REFERER"];
+					echo $url;
+
+				    if(strpos($url, "?")){
+				    	header("Location: " . $_SERVER["HTTP_REFERER"] . "&message=".$message."");
+				    	
+				    	
+				    }else{
+
+
+				    	header("Location: " . $_SERVER["HTTP_REFERER"] . "?message=".$message."");
+				    }
+
+
+			        
+			    }
+
+
+
+
 			}catch(Exception $e){
 				var_dump($e->getMessage());
 			}

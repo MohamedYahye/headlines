@@ -23,13 +23,30 @@
 <head>
 	<title>Uitgvers</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/sources.css">
+
+	<script type="text/javascript" src="assets/js/jquery-3.1.1.min.js"></script>
+
 </head>
+
+
+
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+	})
+
+</script>
+
 <body>
 
 	<div class="source-containter">
 		<div class="sources">
 			<?php
 				
+
+				if(!empty(isset($_GET['message']))){
+					echo "<p id='message'>".$_GET['message']."</p>";
+				}
 
 				if(!empty(isset($_GET['source']))){
 
